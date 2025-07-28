@@ -26,6 +26,8 @@ import cv2 as cv
 import numpy as np
 from datetime import datetime
 from tqdm import tqdm
+import matplotlib
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 from loguru import logger
 

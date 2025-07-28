@@ -58,6 +58,5 @@ def main(working_dir: str,
     my_calib_engine.show_reprojection_error()
     my_calib_engine.show_reprojection()
 
-
 if __name__ == "__main__":
     typer.run(main)

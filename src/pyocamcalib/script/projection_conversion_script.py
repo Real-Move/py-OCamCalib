@@ -20,6 +20,8 @@
 from typing import Tuple
 import typer
 import cv2 as cv
+import matplotlib
+matplotlib.use("TkAgg")
 import matplotlib.pyplot as plt
 
 from pyocamcalib.modelling.camera import Camera

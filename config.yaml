@@ -1,0 +1,5 @@
+camera_name: elp-cam
+width: 640
+height: 480
+chessboard_size_column: 9
+chessboard_size_row: 7

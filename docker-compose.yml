@@ -1,0 +1,17 @@
+services:
+  calibration-routine:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: bash /calibration_routine.sh
+    image: fisheye_calibration_routine
+    privileged: true
+    volumes:
+      - /dev:/dev
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - .:/root/py-OCamCalib
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XDG_RUNTIME_DIR=/tmp/runtime-root
+    restart: "no"
