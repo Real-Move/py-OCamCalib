@@ -1,0 +1,13 @@
+name: Notify issue author if no labels
+on:
+  issues:
+    types: [opened, edited, unlabeled]
+permissions:
+  issues: write
+jobs:
+  notify:
+    uses: Real-Move/.github-private/.github/workflows/notify-unlabeled.yml@main
+    with:
+      helper_label: needs-label
+    permissions:
+      issues: write

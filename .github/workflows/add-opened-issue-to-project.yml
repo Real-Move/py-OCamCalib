@@ -1,0 +1,22 @@
+name: Add to Main Project when issue opened
+
+on:
+  issues:
+    types: [opened]   # also supports reopened, transferred, labeled
+
+# Grant the scopes that the called workflow requests
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  add:
+    uses: Real-Move/.github-private/.github/workflows/add-to-project.yml@main
+    with:
+      project_url: https://github.com/orgs/Real-Move/projects/8
+      # Optional label filter examples:
+      # labeled: bug, needs-triage
+      # label_operator: OR
+    secrets:
+      ADD_TO_PROJECT_PAT: ${{ secrets.ADD_TO_PROJECT_PAT }}
