@@ -1,0 +1,22 @@
+---
+name: Issue
+description: Describe a task, improvement, or problem.
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the task or problem and the expected outcome.
+      placeholder: Short and explicit description of the task or problem...
+    validations:
+      required: true
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done (DoD)
+      description: Optional. List the criteria that must be met to close this issue.
+      placeholder: |
+        - [ ] Expected outcome achieved
+        - [ ] Relevant checks completed
+    validations:
+      required: false
